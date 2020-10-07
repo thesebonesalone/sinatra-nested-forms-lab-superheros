@@ -1,1 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Create a Team and Heroes!</h1>
+            <form action='/team' method="POST">
+            <p>Team Name: <input type="text" name="team[name]"><p>
+            <p>Team Motto: <input type="text" name="team[motto]"><p>
+            <% count = 1;3.times do %>
+                <h2>Hero <%= count%></h2>
+                <p>Hero's Name: <input type="text" name="team[hero][][name]"></p>
+                <p>Hero's Power: <input type="text" name="team[hero][][power]"></p>
+                <p>Hero's Biography: <input type="text" name="team[hero][][biography]"></p>
+                <% count += 1 %>
+            <% end %>       
+            <input type="submit" value="Submit">
+            </form>
 
+</html>
